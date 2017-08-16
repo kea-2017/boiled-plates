@@ -16,7 +16,7 @@ export default class Dropdown extends React.Component {
     return (
       <div>
         <Link to='/'>
-         <button type="button" class="btn btn-primary">Home</button>
+         <button type="button" className="btn btn-primary">Home</button>
        </Link>
        <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}</ButtonToolbar>
       </div>
