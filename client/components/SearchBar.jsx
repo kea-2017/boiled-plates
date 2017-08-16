@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
+
 export default class SearchBar extends React.Component {
   constructor(props) {
     super(props)
@@ -14,7 +15,7 @@ export default class SearchBar extends React.Component {
           <div className="input-group">
             <span className="input-group-btn">
               <Link to='/search'>
-                <button className="btn btn-default" type="button">Go!</button>
+                <button  className="btn btn-default" type="button">Go!</button>
               </Link>
             </span>
             <input type="text" className="form-control" placeholder="Search for..."/>

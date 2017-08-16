@@ -1,6 +1,6 @@
-export const searchTerms = (terms) => {
+export const searchTermAction = (term) => {
   return {
     type: 'MAKE_SEARCH',
-    terms
+    term
   }
 }

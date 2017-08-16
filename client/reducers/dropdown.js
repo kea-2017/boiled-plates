@@ -1,11 +1,11 @@
-function searches (state = '', action) {
+function dropDown (state = '', action) {
   switch (action.type) {
     case 'MAKE_SEARCH':
     console.log(action)
-      return action.term
+      return action.choice
     default:
       return state
   }
 }
 
-export default searches
+export default dropDown
