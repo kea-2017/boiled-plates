@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
-import { ButtonToolbar, DropdownButton, MenuItem, Button } from 'react-bootstrap';
+import { ButtonToolbar, DropdownButton, MenuItem, Button, Pager } from 'react-bootstrap';
 
 export default class Dropdown extends React.Component {
   constructor(props) {
@@ -20,6 +20,10 @@ export default class Dropdown extends React.Component {
        </Link>
        <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}
        </ButtonToolbar>
+       <Pager>
+         <Pager.Item previous href="/">&larr; Previous Page</Pager.Item>
+         <Pager.Item next href="#/map">Next Page &rarr;</Pager.Item>
+       </Pager>
       </div>
     )
   }

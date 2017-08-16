@@ -5,8 +5,10 @@ import {connect} from 'react-redux'
 import Header from './Header'
 import SearchBar from './SearchBar'
 import Login from './Login'
+import MapPage from './MapPage'
 import Dropdown from './Dropdown'
 import MapBar from './MapBar'
+
 
 const App = () => (
   <Router>
@@ -16,6 +18,7 @@ const App = () => (
       <Route exact path="/" component={Login}/>
       <Route  exact path="/" component={MapBar} />
       <Route exact path="/main" component={Dropdown}/>
+      <Route exact path="/map" component={MapPage}/>
     </div>
   </Router>
 )
