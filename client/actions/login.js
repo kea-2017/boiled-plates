@@ -1,4 +1,4 @@
-export const login = (name) => {
+export const loginAction = (name) => {
   return {
     type: 'REQUEST_LOGIN',
     name

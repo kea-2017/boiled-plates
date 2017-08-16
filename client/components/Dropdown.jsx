@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
-import { ButtonToolbar, DropdownButton, MenuItem } from 'react-bootstrap';
+import { ButtonToolbar, DropdownButton, MenuItem, Button } from 'react-bootstrap';
 
 export default class Dropdown extends React.Component {
   constructor(props) {
@@ -18,7 +18,8 @@ export default class Dropdown extends React.Component {
         <Link to='/'>
          <button type="button" className="btn btn-primary">Home</button>
        </Link>
-       <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}</ButtonToolbar>
+       <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}
+       </ButtonToolbar>
       </div>
     )
   }

@@ -1,10 +1,10 @@
-function searches (state = [], action) {
+function logins (state = '', action) {
   switch (action.type) {
     case 'REQUEST_LOGIN':
-      return [...action.login]
+      return action.logins
     default:
       return state
   }
 }
 
-export default login
+export default logins
