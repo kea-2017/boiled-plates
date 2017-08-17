@@ -35,15 +35,16 @@ export default class Dropdown extends React.Component {
         <Grid>
           <Row className="header">
             <Col xs={2} md={2}></Col>
-          <Col xs={10} md={10}>
-        <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}
-        </ButtonToolbar></Col>
-        <Col xs={2} md={2}></Col>
-        <Link to='/'>
-        <button type="button" className="btn btn-primary">Home</button>
-      </Link>
-      </Row>
-    </Grid>
+            <Col xs={10} md={10}>
+              <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}
+              </ButtonToolbar>
+            </Col>
+            <Col xs={2} md={2}></Col>
+            <Link to='/'>
+              <button type="button" className="btn btn-primary">Home</button>
+            </Link>
+          </Row>
+        </Grid>
         <Row>
           <br></br>
           <br></br>
@@ -54,12 +55,16 @@ export default class Dropdown extends React.Component {
             <Row className="show-grid">
               <Col xs={2} md={3}></Col>
               <Col xs={4} md={3}>
-                <Button bsStyle="primary" bsSize="large">Prescriptions</Button>
+                <Link to='/Prescriptions'>
+                  <Button bsStyle="primary" bsSize="large">Prescriptions</Button>
+                </Link>
               </Col>
               <Col xs={2} md={3}></Col>
               <Col xs={2} md={3}></Col>
               <Col xs={4} md={3}>
-                <Button bsStyle="primary" bsSize="large">Referals</Button>
+                <Link to='/Referals'>
+                  <Button bsStyle="primary" bsSize="large">Referals</Button>
+                </Link>
               </Col>
               <Col xs={2} md={3}></Col>
             </Row>
@@ -71,12 +76,16 @@ export default class Dropdown extends React.Component {
             <Row className="show-grid">
               <Col xs={2} md={3}></Col>
               <Col xs={4} md={3}>
-                <Button bsStyle="primary" bsSize="large">Advice</Button>
+                <Link to='/Advice'>
+                  <Button bsStyle="primary" bsSize="large">Advice</Button>
+                </Link>
               </Col>
               <Col xs={2} md={3}></Col>
               <Col xs={2} md={3}></Col>
               <Col xs={4} md={3}>
-                <Button bsStyle="primary" bsSize="large">Warnings</Button>
+                <Link to='/Warnings'>
+                  <Button bsStyle="primary" bsSize="large">Warnings</Button>
+                </Link>
               </Col>
               <Col xs={2} md={3}></Col>
             </Row>
