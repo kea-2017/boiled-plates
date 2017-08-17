@@ -1,7 +1,6 @@
 import React from 'react'
 import test from 'ava'
 import { shallow, mount } from 'enzyme'
-import Header from '../../client/components/Header'
 
 import App from '../../client/components/App'
 import './setup-dom'
@@ -10,12 +9,7 @@ App.prototype.componentDidMount = () => {}
 
 test('App renders', t => {
   const wrapper = shallow(<App />)
-  t.is(wrapper.find('h1').text(), 'Hello World')
-})
-
-test('Header showing', t => {
-  const wrapper = shallow(<Header />)
-  t.is(wrapper.find('h1').text(), 'Portal GPyour localhost Md')
+  t.is(wrapper.find('Header').length,1)
 })
 
 // test('BeerListItem receives 1 item', t => {
