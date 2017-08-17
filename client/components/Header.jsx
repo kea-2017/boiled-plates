@@ -9,7 +9,7 @@ const Header = () => {
         <Row className="header">
           <Col xs={1} md={4}></Col>
           <Col xs={4} md={4}>
-            <h1>Hello Dave<small>wanna buy some pegs</small>
+            <h1>Portal GP<small>your localhost Md</small>
             </h1>
           </Col>
           <Col xs={1} md={4}></Col>

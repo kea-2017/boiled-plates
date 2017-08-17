@@ -1,7 +1,6 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
-// import Greetings from './Greetings'
 import Header from './Header'
 import SearchBar from './SearchBar'
 import Login from './Login'
@@ -17,7 +16,7 @@ import Warnings from './Warnings'
 const App = () => (
   <Router>
     <div className='app-container'>
-      <Route path="/" component={Header}/> {/* <Route  exactpath="/" component={Greetings} /> */}
+      <Route path="/" component={Header}/>
       <Route exact path="/" component={SearchBar}/>
       <Route exact path="/" component={Login}/>
       <Route exact path="/" component={MapBar} />
