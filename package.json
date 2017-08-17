@@ -54,6 +54,7 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.2",
     "react-dom": "^15.5.4",
+    "react-google-maps": "^7.2.0",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "react-test-renderer": "^15.5.4",
