@@ -15,7 +15,7 @@ export default class SearchBar extends React.Component {
         <div className="col-lg-6">
           <div className="input-group">
             <span className="input-group-btn">
-              <Link to='/main'>
+              <Link to='/SearchResult'>
                 <button className="btn btn-default" type="button">Go!</button>
               </Link>
             </span>

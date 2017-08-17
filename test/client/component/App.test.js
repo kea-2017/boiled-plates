@@ -1,15 +1,22 @@
 import React from 'react'
 import test from 'ava'
 import { shallow, mount } from 'enzyme'
-
-import App from '../../client/components/App'
-import './setup-dom'
+import {Provider} from 'react-redux'
+import store from '../../../client/store'
+import App from '../../../client/components/App'
+import {MemoryRouter as Router} from 'react-router-dom'
+import '../setup-dom'
 
 App.prototype.componentDidMount = () => {}
 
-test('App renders', t => {
-  const wrapper = shallow(<App />)
-  t.is(wrapper.find('Header').length,1)
+test('App renders with a router', t => {
+  const wrapper = mount(
+    <Provider store={store}>
+        <App Router={Router}/>
+    </Provider>)
+
+  t.is(wrapper.find('Router').exists(),true)
+  t.is(wrapper.find('.app-container').exists(),true)
 })
 
 // test('BeerListItem receives 1 item', t => {

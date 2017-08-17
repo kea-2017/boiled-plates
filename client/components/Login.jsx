@@ -8,7 +8,7 @@ export default class Login extends React.Component {
     return (
       <div>
         <div className="input-group">
-          <input type="text" className="form-control" placeholder="Proto login area" aria-describedby="basic-addon1"/>
+          <input type="text" className="form-control" placeholder="thedoctorisin@thunderbird.com" aria-describedby="basic-addon1"/>
           <span className="input-group-addon" id="basic-addon1">
             <Link to='/main'>Submit!</Link>
           </span>

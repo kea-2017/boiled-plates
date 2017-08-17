@@ -1,5 +1,4 @@
 import React from 'react'
-import {HashRouter as Router, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Header from './Header'
 import SearchBar from './SearchBar'
@@ -11,9 +10,11 @@ import Prescriptions from './Prescriptions'
 import Referals from './Referals'
 import Advice from './Advice'
 import Warnings from './Warnings'
+import SearchResult from './SearchResult'
+import {Route} from 'react-router-dom'
 
 
-const App = () => (
+const App = ({Router}) => (
   <Router>
     <div className='app-container'>
       <Route path="/" component={Header}/>
@@ -21,6 +22,7 @@ const App = () => (
       <Route exact path="/" component={Login}/>
       <Route exact path="/" component={MapBar} />
       <Route exact path="/main" component={Dropdown}/>
+      <Route exact path="/SearchResult" component={SearchResult}/>
       <Route exact path="/map" component={MapPage}/>
       <Route exact path="/Prescriptions" component={Prescriptions}/>
       <Route exact path="/Referals" component={Referals}/>
