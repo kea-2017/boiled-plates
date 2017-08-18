@@ -22,7 +22,7 @@ test.cb('read prescriptions db', t => {
   prescriptionsDb.getPrescriptions(t.context.db)
     .then(prescriptions => {
       t.is(prescriptions.length, 3)
-      t.true(prescriptions[0].hasOwnProperty('gp'))
+      t.true(prescriptions[0].hasOwnProperty('dose'))
       t.end()
     })
 })
