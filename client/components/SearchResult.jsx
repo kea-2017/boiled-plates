@@ -7,7 +7,7 @@ import {ButtonToolbar,DropdownButton,MenuItem,Button,
     return (
       <div>
         <Grid>
-          <Row className="header">
+          <Row className="search result">
             <Col xs={1} md={4}></Col>
             <Col xs={4} md={4}>
               <h1>SearchResult<small>SearchResult</small>

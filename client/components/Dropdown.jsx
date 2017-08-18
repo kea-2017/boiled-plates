@@ -23,12 +23,11 @@ export default class Dropdown extends React.Component {
   }
   render() {
     const BUTTONS = [
-      'Default',
-      'Primary',
-      'Success',
-      'Info',
+      ' Health tips',
+      ' Fun ',
+      ' Info ',
       'Warning',
-      'Danger'
+      ' Diet '
     ]
     return (
       <div>
@@ -40,9 +39,7 @@ export default class Dropdown extends React.Component {
               </ButtonToolbar>
             </Col>
             <Col xs={2} md={2}></Col>
-            <Link to='/'>
-              <button type="button" className="btn btn-primary">Home</button>
-            </Link>
+
           </Row>
         </Grid>
         <Row>
@@ -77,7 +74,7 @@ export default class Dropdown extends React.Component {
               <Col xs={2} md={3}></Col>
               <Col xs={4} md={3}>
                 <Link to='/Advice'>
-                  <Button bsStyle="primary" bsSize="large">Advice</Button>
+                  <Button bsStyle="primary" bsSize="large"> Advice </Button>
                 </Link>
               </Col>
               <Col xs={2} md={3}></Col>
@@ -103,11 +100,11 @@ export default class Dropdown extends React.Component {
 function renderDropdownButton(title, i) {
   return (
     <DropdownButton bsStyle={title.toLowerCase()} title={title} key={i} id={`dropdown-basic-${i}`}>
-      <MenuItem eventKey="1">Action</MenuItem>
-      <MenuItem eventKey="2">Another action</MenuItem>
-      <MenuItem eventKey="3" active>Active Item</MenuItem>
+      <MenuItem eventKey="1">Not telling you again</MenuItem>
+      <MenuItem eventKey="2">Or else !</MenuItem>
+      <MenuItem eventKey="3" active>Last warning</MenuItem>
       <MenuItem divider/>
-      <MenuItem eventKey="4">Separated link</MenuItem>
+      <MenuItem eventKey="4">Right !</MenuItem>
     </DropdownButton>
   )
 }
