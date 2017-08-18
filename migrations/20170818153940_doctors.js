@@ -1,3 +1,4 @@
+
 exports.up = function(knex, Promise) {
   return knex.schema.createTableIfNotExists('doctors', (table) => {
     table.increments('id')
