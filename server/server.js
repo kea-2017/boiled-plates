@@ -1,14 +1,16 @@
-var path = require('path')
 var express = require('express')
+const passport = require('passport')
 var bodyParser = require('body-parser')
 var cors = require('cors')
+var path = require('path')
+var server = express()
 
 var greetings = require('./routes/greeting')
 var auth = require('./routes/auth')
 
-var server = express()
 
 server.use(cors('*'))
+server.use(passport.initialize())
 
 server.use(bodyParser.json())
 server.use(express.static(path.join(__dirname, '../public')))
