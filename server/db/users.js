@@ -1,17 +1,19 @@
-var {knex} = require('../index.js')
 
 
-function createUser (username, password, conn) {
-  const db = conn || knex
+// var Knex = require('knex')
+// var config = require('../knexfile')[process.env.NODE_ENV || 'development']
+// var knex = Knex(config)
+
+
+function createUser (username, password, db) {
   return db('users')
   .insert({username, hash: password})
   //insert newUser
 }
 
 
-function userExists (username, conn) {
+function userExists (username, db) {
   //return true of false
-  const db = conn || knex
   return db('users')
   .count ('id as n')
   .where('username', username)

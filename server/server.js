@@ -15,7 +15,7 @@ server.use(express.static(path.join(__dirname, '../public')))
 
 server.use('/api/greetings', greetings)
 // server.use('/api/auth', auth)
-server.use('/api/register', auth)
+server.use('/api/v1/auth', auth)
 
 module.exports = function(db) {
   server.set('db', db)
