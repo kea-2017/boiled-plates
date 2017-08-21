@@ -1,25 +1,23 @@
 const config = require('../../knexfile')[process.env.NODE_ENV || 'development']
 
-
-const crypto = require('/crypto')
-
+const hash = require('../auth/hash')
 
 function exists (username, db){
-  return connection('users')
+  return db('users')
     .count('id as n')
     .where('username', username)
     .then(count => {
-      return[0].n > 0
+      return count[0].n > 0
     })
 }
 
 function create (username, password, db){
-  const hash = crypto.getHash(password)
+  const hashedPassword = hash.getHash(password)
 
-  return connection('users')
+  return db('users')
     .insert({
-      uusername: username,
-      hash: hash
+      username: username,
+      hash: hashedPassword
     })
 }
 
