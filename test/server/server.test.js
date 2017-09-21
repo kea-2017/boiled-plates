@@ -1,6 +1,5 @@
 var test = require('ava')
 var request = require('supertest')
-
 var createServer = require('../../server/server')
 var prescriptionsDb = require('../../server/db/prescriptions')
 var setupDb = require('./setup-db')
@@ -17,7 +16,6 @@ test.cb('GET /', t => {
       t.end()
     })
 })
-
 test.cb('read prescriptions db', t => {
   prescriptionsDb.getPrescriptions(t.context.db)
     .then(prescriptions => {

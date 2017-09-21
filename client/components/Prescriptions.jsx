@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {getPrescriptions} from '../actions/prescriptions'
-// import knex from 'knex'
+import knex from 'knex'
 import {connect} from 'react-redux'
 import {ButtonToolbar,DropdownButton,MenuItem,Button,
   Pager,Grid,Row,Col,Input,Form} from 'react-bootstrap'

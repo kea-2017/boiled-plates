@@ -15,7 +15,6 @@ test('Prescriptions showing', t => {
       </Router>
     </Provider>
   )
-  // console.log(wrapper.html())
   t.is(wrapper.find('select').length, 3)
   t.is(wrapper.find('option').exists(), true)
 })

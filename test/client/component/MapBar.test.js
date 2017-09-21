@@ -15,7 +15,6 @@ test('MapBar showing', t => {
       </Router>
     </Provider>
   )
-  // console.log(wrapper.html())
   t.is(wrapper.find('div').length, 2)
   t.is(wrapper.find('input').exists(), true)
 })

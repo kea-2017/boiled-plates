@@ -3,16 +3,8 @@ import {Link} from 'react-router-dom'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 import {
-  ButtonToolbar,
-  DropdownButton,
-  MenuItem,
-  Button,
-  Pager,
-  Grid,
-  Row,
-  Col,
-  Input
-} from 'react-bootstrap'
+  ButtonToolbar,  DropdownButton,  MenuItem,Button,Pager,
+  Grid,Row,Col,Input} from 'react-bootstrap'
 
 export default class Dropdown extends React.Component {
   constructor(props) {
@@ -22,24 +14,14 @@ export default class Dropdown extends React.Component {
     }
   }
   render() {
-    const BUTTONS = [
-      ' Health tips',
-      ' Fun ',
-      ' Info ',
-      'Warning',
-      ' Diet '
-    ]
     return (
       <div>
         <Grid>
           <Row className="header">
             <Col xs={2} md={2}></Col>
             <Col xs={10} md={10}>
-              <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}
-              </ButtonToolbar>
             </Col>
             <Col xs={2} md={2}></Col>
-
           </Row>
         </Grid>
         <Row>
@@ -95,16 +77,4 @@ export default class Dropdown extends React.Component {
       </div>
     )
   }
-}
-
-function renderDropdownButton(title, i) {
-  return (
-    <DropdownButton bsStyle={title.toLowerCase()} title={title} key={i} id={`dropdown-basic-${i}`}>
-      <MenuItem eventKey="1">Not telling you again</MenuItem>
-      <MenuItem eventKey="2">Or else !</MenuItem>
-      <MenuItem eventKey="3" active>Last warning</MenuItem>
-      <MenuItem divider/>
-      <MenuItem eventKey="4">Right !</MenuItem>
-    </DropdownButton>
-  )
 }

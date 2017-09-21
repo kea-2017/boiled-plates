@@ -1,7 +1,6 @@
 import React from 'react'
 import test from 'ava'
 import { shallow, mount } from 'enzyme'
-
 import Warnings from '../../../client/components/Warnings'
 
 test('Warnings showing', t => {
