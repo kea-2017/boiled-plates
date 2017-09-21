@@ -1,7 +1,6 @@
 import React from 'react'
 import test from 'ava'
 import { shallow, mount } from 'enzyme'
-
 import SearchBar from '../../../client/components/SearchBar'
 
 test('SearchBar showing', t => {

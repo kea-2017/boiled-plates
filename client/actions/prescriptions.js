@@ -1,9 +1,7 @@
 import request from 'superagent'
-
 export const seePrescription = (prescriptions) => {
   return {type: 'SEE_PRESCRIPTIONS', prescriptions}
 }
-
 export function getPrescriptions() {
   return (dispatch) => {
     request.get(`/api/prescriptions`).end((err, res) => {

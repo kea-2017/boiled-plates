@@ -15,8 +15,8 @@ import {Link} from 'react-router-dom'
             </Col>
             <Col xs={1} md={4}></Col>
           </Row>
-          <Link to='/'>
-            <button type="button" className="btn btn-primary">Home</button>
+          <Link to='/main'>
+            <button type="button" className="btn btn-primary">Main</button>
           </Link>
         </Grid>
       </div>

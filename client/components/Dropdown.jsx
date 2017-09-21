@@ -3,16 +3,8 @@ import {Link} from 'react-router-dom'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
 import {
-  ButtonToolbar,
-  DropdownButton,
-  MenuItem,
-  Button,
-  Pager,
-  Grid,
-  Row,
-  Col,
-  Input
-} from 'react-bootstrap'
+  ButtonToolbar,  DropdownButton,  MenuItem,Button,Pager,
+  Grid,Row,Col,Input} from 'react-bootstrap'
 
 export default class Dropdown extends React.Component {
   constructor(props) {
@@ -22,27 +14,14 @@ export default class Dropdown extends React.Component {
     }
   }
   render() {
-    const BUTTONS = [
-      'Default',
-      'Primary',
-      'Success',
-      'Info',
-      'Warning',
-      'Danger'
-    ]
     return (
       <div>
         <Grid>
           <Row className="header">
             <Col xs={2} md={2}></Col>
             <Col xs={10} md={10}>
-              <ButtonToolbar>{BUTTONS.map(renderDropdownButton)}
-              </ButtonToolbar>
             </Col>
             <Col xs={2} md={2}></Col>
-            <Link to='/'>
-              <button type="button" className="btn btn-primary">Home</button>
-            </Link>
           </Row>
         </Grid>
         <Row>
@@ -77,7 +56,7 @@ export default class Dropdown extends React.Component {
               <Col xs={2} md={3}></Col>
               <Col xs={4} md={3}>
                 <Link to='/Advice'>
-                  <Button bsStyle="primary" bsSize="large">Advice</Button>
+                  <Button bsStyle="primary" bsSize="large"> Advice </Button>
                 </Link>
               </Col>
               <Col xs={2} md={3}></Col>
@@ -98,16 +77,4 @@ export default class Dropdown extends React.Component {
       </div>
     )
   }
-}
-
-function renderDropdownButton(title, i) {
-  return (
-    <DropdownButton bsStyle={title.toLowerCase()} title={title} key={i} id={`dropdown-basic-${i}`}>
-      <MenuItem eventKey="1">Action</MenuItem>
-      <MenuItem eventKey="2">Another action</MenuItem>
-      <MenuItem eventKey="3" active>Active Item</MenuItem>
-      <MenuItem divider/>
-      <MenuItem eventKey="4">Separated link</MenuItem>
-    </DropdownButton>
-  )
 }

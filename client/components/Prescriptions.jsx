@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {getPrescriptions} from '../actions/prescriptions'
-// import knex from 'knex'
+import knex from 'knex'
 import {connect} from 'react-redux'
 import {ButtonToolbar,DropdownButton,MenuItem,Button,
   Pager,Grid,Row,Col,Input,Form} from 'react-bootstrap'
@@ -28,7 +28,7 @@ export default class Prescriptions extends React.Component {
           <Form>
             <select>
               <option defaultValue>GP</option>
-              <option value='Dave'>Dave</option>
+              <option value='Dave'>Dr Teeth</option>
               <option value='Dave'>Papa Lazaru</option>
             </select>
             <select>
@@ -38,12 +38,15 @@ export default class Prescriptions extends React.Component {
             </select>
             <select>
               <option defaultValue>Condition</option>
-              <option value='BBB'>Edward</option>
-              <option value='BBB'>Tubbs</option>
+              <option value='BBB'>Good</option>
+              <option value='BBB'>Bad</option>
             </select>
           </Form>
-          <Link to='/'>
-            <Button type="button" className="btn btn-primary">Home</Button>
+          <Row><br></br></Row>
+          <Row><br></br></Row>
+          <Row><br></br></Row>
+          <Link to='/main'>
+            <Button type="button" className="btn btn-primary">Main</Button>
           </Link>
         </Grid>
       </div>

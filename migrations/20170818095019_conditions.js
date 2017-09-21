@@ -3,8 +3,8 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.string('name')
     table.string('symptoms')
-    table.string('patient_id')
-
+    table.boolean('doesWork')
+    table.integer('patient_id')
   })
 };
 

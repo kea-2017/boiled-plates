@@ -2,19 +2,20 @@ import React from 'react'
 import test from 'ava'
 import { shallow, mount } from 'enzyme'
 import '../setup-dom'
-import MapBar from '../../../client/components/MapBar'
+import Dropdown from '../../../client/components/Dropdown'
 import {MemoryRouter as Router} from 'react-router-dom'
 import {Provider} from 'react-redux'
 import store from '../../../client/store'
 
-test('MapBar showing', t => {
+test('Dropdown showing', t => {
   const wrapper = mount(
     <Provider store={store}>
       <Router>
-        <MapBar />
+        <Dropdown />
       </Router>
     </Provider>
   )
-  t.is(wrapper.find('div').length, 2)
-  t.is(wrapper.find('input').exists(), true)
+  // console.log(wrapper.html())
+  // t.is(wrapper.find('renderDropdownButton()').length, 1)
+  t.is(wrapper.find('ButtonToolbar').exists(), true)
 })
