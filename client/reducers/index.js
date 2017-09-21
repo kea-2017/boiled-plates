@@ -9,3 +9,4 @@ export default combineReducers({
   greetings, dropdown,login,
   searchbar,mapBar
 })
+
